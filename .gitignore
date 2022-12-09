@@ -1,7 +1,15 @@
+# Specific files
+device_dictionary.py
+device_mapping.py
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+
+
 
 # C extensions
 *.so
@@ -127,3 +135,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
