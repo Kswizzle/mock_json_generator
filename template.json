@@ -1,0 +1,21 @@
+
+{
+    "id": nebMAC,
+    "sensors": {
+        "time": neb_start,
+        "location": location,
+        "device_eACH": eACH_dic,
+        "zone_eACH": eACH_score,
+        "zone": mapping[location]["zone"],
+        "site": mapping[location]["site"],
+        "zone_id": mapping[location]["zone_id"],
+        "site_id": mapping[location]["site_id"],
+        "key_times": get_str_key_times(neb_start = neb_start, neb_duration = nebuliazation_duration_seconds),
+        "occupancy": 0,
+        "stay_safe_time": 0,
+        "stay_safe_occupancy": 0,
+        "vent_per_person":0,
+        "infection_risk": 0
+        },
+    "type": "result"
+}
