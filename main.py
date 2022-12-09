@@ -28,11 +28,13 @@ def make_json():
     print(site_chosen)
     site_data = mapping[site_chosen]
     start_time = random.randint(EPOCH_START, EPOCH_END)
+    neb_mac = mapping[site_chosen]['devices'][0]
+    sensors_macs = mapping[site_chosen]['devices'][1:]
 
-    eACH_dic = dict(zip(mapping[site_chosen]['devices'], [random.uniform(0,10) for x in range(0,len(mapping[site_chosen]['devices']))]))
+    eACH_dic = dict(zip(sensors_macs, [random.uniform(0,10) for x in range(0,len(sensors_macs))]))
     eACH_score = np.array(list(eACH_dic.values())).mean()
     mock_json = {
-        "id": mapping[site_chosen]["mac"],
+        "id": neb_mac,
         "sensors": {
             "time": start_time,
             "location": site_chosen,
