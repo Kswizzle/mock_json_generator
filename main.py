@@ -32,7 +32,7 @@ def make_json():
     eACH_dic = dict(zip(mapping[site_chosen]['devices'], [random.uniform(0,10) for x in range(0,len(mapping[site_chosen]['devices']))]))
     eACH_score = np.array(list(eACH_dic.values())).mean()
     mock_json = {
-        "id": site_chosen,
+        "id": mapping[site_chosen]["mac"],
         "sensors": {
             "time": start_time,
             "location": site_chosen,
